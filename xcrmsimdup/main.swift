@@ -35,7 +35,7 @@ func printUsage()
 {
     println(
         "Usage: xcrmsimdup [options]\n" +
-        "                                                                                \n" +
+        "\n" +
         "Find duplicated simulator records from the active developer directory listed\n" +
         "by command `xcrun simctl list` and remove duplicates using\n" +
         "`xcrun simctl delete`.\n" +
@@ -275,7 +275,7 @@ func processDuplicatesInSection(string: String, section: Section, isShowOnly: Bo
 
 if Process.argc != 2
 {
-    println("Invalid options count\n")
+    println("Invalid options count")
     printUsage();
     exit(1)
 }
@@ -297,7 +297,7 @@ case "-s", "--show":
     isShowOnlyMode = true;
 
 default:
-    println("Unknown option \(Process.arguments[1])\n")
+    println("Unknown option \(Process.arguments[1])")
     printUsage()
     exit(1)
 }
