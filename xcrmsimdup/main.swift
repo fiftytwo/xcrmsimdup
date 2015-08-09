@@ -134,7 +134,7 @@ func intFromStringIndex(string: String, index: String.Index) -> Int
 }
 
 
-public func NSRangeFromStringRange(string: String, range: Range<String.Index>) -> NSRange
+func NSRangeFromStringRange(string: String, range: Range<String.Index>) -> NSRange
 {
     let utf16Start = intFromStringIndex(string, range.startIndex)
 
@@ -156,7 +156,7 @@ func stringIndexFromInt(string: String, index: Int) -> String.Index?
 }
 
 
-public func stringRangeFromNSRange(string: String, nsRange: NSRange) -> Range<String.Index>?
+func stringRangeFromNSRange(string: String, nsRange: NSRange) -> Range<String.Index>?
 {
     if nsRange.location == NSNotFound
     {
